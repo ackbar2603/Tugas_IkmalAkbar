@@ -1,10 +1,7 @@
-package com.example.infinitelearning
+package com.example.infinitelearning.presentation
 
-import android.annotation.SuppressLint
-import android.graphics.drawable.shapes.Shape
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,15 +11,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -31,16 +24,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.material3.Card
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.TextField
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
+import com.example.infinitelearning.R
 
 
 @Composable
-fun AccountDetail(navController: NavHostController){
+fun AccountDetail(
+    navController: NavHostController
+){
     Column (
         modifier = Modifier
             .fillMaxSize()
@@ -132,7 +124,7 @@ fun AccountDetail(navController: NavHostController){
         Spacer(modifier = Modifier.height(12.dp))
 
         Card (
-            modifier = Modifier.size(width = 350.dp, height = 200.dp),
+            modifier = Modifier.size(width = 350.dp, height = 80.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.White),
             elevation = CardDefaults.elevatedCardElevation(5.dp)
@@ -149,26 +141,9 @@ fun AccountDetail(navController: NavHostController){
                     verticalAlignment = Alignment.CenterVertically
                 ){
                     Text(text = "Spek PC: ", fontWeight = FontWeight.Bold, modifier = Modifier.width(100.dp))
-                    Text(text = """CPU: Intel core i5-4590
-                        |GPU: Gigabyte Nvidia GTX 1070 8GB
-                        |RAM: 8GB DDR8
-                        |OS: Linux Mint Cinammon
-                        |Storage: HDD 500GB
-                        |Fav Game: War Thunder
-                    """.trimMargin())
+                    Text(text = "Merakit PC gaming")
                 }
             }
         }
-
-        Spacer(modifier = Modifier.height(18.dp))
-
-        Button(
-            onClick = {navController.navigate("home")},
-            shape = RoundedCornerShape(4.dp),
-            elevation = ButtonDefaults.elevatedButtonElevation(5.dp),
-            modifier = Modifier.size(width = 280.dp, height = 45.dp)) {
-            Text(text = "Ashiap")
-        }
-
     }
 }

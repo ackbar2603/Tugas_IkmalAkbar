@@ -1,10 +1,11 @@
-package com.example.infinitelearning
+package com.example.infinitelearning.presentation
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
@@ -58,13 +59,25 @@ fun MainScreen(navController: NavHostController){
             )
         },
         bottomBar = {
-            NavigationBar {
-                NavigationBarItem(
-                    selected = true,
-                    onClick = { /*TODO*/ },
-                    icon = { Icon(imageVector = Icons.Default.Home, contentDescription = null)})
+            BottomAppBar {
+                Row (
+
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    verticalAlignment = Alignment.CenterVertically
+                ){
+                    IconButton(onClick = { /*TODO*/ }) {
+                        Icon(imageVector = Icons.Default.Home, contentDescription = null )
+                    }
+                    }
+                    IconButton(onClick = { /*TODO*/ }) {
+                        Icon(imageVector = Icons.Default.Add, contentDescription = null)
+                    }
+                    IconButton(onClick = { /*TODO*/ }) {
+                        Icon(imageVector = Icons.Default.AccountCircle, contentDescription = null)
+                    }
+
+                }
             }
-        }
 
     ) {
 

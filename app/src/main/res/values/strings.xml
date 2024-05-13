@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">InfiniteLearning</string>
+    <string name="home">Main</string>
+    <string name="account">Account</string>
+    <string name="favorite">Favorites</string>
+    <string name="photos">Photos</string>
 </resources>
